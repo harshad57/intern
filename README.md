@@ -1,34 +1,41 @@
-# 📊 React Spreadsheet UI Clone
+# Spreadsheet UI Clone
 
-A pixel-perfect frontend prototype of a spreadsheet layout built with **React**, **Tailwind CSS**, and `react-table`. Inspired by Google Sheets/Airtable UI.
+A small React + Vite demo that recreates a modern marketing-style landing page (hero, features, header) built with Tailwind CSS and Lucide icons. This repository is a lightweight UI clone intended for experimenting with layout, responsive design, and Tailwind utilities.
 
----
+This project is not a full spreadsheet app — the name is inherited from the workspace — but a visual clone of a landing page UI.
 
-## ✅ Features
+## Tech stack
 
-- Spreadsheet-style layout with **row numbers**
-- Styled badges for status, priority, links
-- Responsive, scrollable grid
-- Cell selection with green border
-- Truncated text with `...`
-- Styled header toolbar & action buttons (Import, Export, Share)
+- React
+- Vite
+- Tailwind CSS (via CDN in the demo)
+- lucide-react (icons)
 
----
+## Files of interest
 
-## 🔧 Built With
+- `index.html` — base HTML used by Vite.
+- `package.json` — Node scripts and dependencies.
+- `vite.config.js` — Vite configuration.
+- `src/App.jsx` — Main React app and all UI components (Header, HeroSection, FeaturesSection).
+- `src/main.jsx` — React entrypoint.
+- `src/index.css` — Project CSS (Tailwind directives / overrides).
 
-- ⚛️ React 18
-- 🎨 Tailwind CSS
-- 📊 `react-table`
-- ⚡ Vite (for dev server)
+## Setup
 
----
+1. Install dependencies
 
-## 📦 Setup
+   Open PowerShell in the project root and run:
 
-1. Clone the project:
-   ```bash
-   git clone https://github.com/yourname/react-spreadsheet-ui
-   cd react-spreadsheet-ui
    npm install
+
+2. Run the development server
+
    npm run dev
+
+   This starts Vite and opens a dev server (usually at http://localhost:5173). Live reload is enabled.
+
+## Notes about the demo
+
+- The project uses Tailwind CSS via the CDN link directly inserted in `src/App.jsx` for quick prototyping. For production or larger projects, prefer installing Tailwind as a PostCSS plugin and generating a compiled stylesheet.
+- Icons are provided by `lucide-react`. If you add icons, import them from `lucide-react` at the top of `src/App.jsx`.
+- The `App.jsx` file contains inline styles and small illustrative SVGs to keep the demo self-contained.
