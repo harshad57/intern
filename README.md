@@ -1,41 +1,59 @@
-# Spreadsheet UI Clone
+A small React + Vite demo project that recreates a modern landing page / UI for a resume/profile service. It uses Tailwind CSS for styling and the `lucide-react` icon set for SVG icons. The project is intentionally small and focused on UI structure and styling, suitable as a learning example or a base for building a marketing landing page.
 
-A small React + Vite demo that recreates a modern marketing-style landing page (hero, features, header) built with Tailwind CSS and Lucide icons. This repository is a lightweight UI clone intended for experimenting with layout, responsive design, and Tailwind utilities.
+## Features
 
-This project is not a full spreadsheet app — the name is inherited from the workspace — but a visual clone of a landing page UI.
+- Responsive landing page layout with header, hero, features grid, and footer
+- Fully built using React components and Tailwind CSS utility classes
+- Uses Vite for fast dev server and build
+- Lightweight and focused — great for experimenting with Tailwind layouts and responsive design
 
 ## Tech stack
 
 - React
 - Vite
-- Tailwind CSS (via CDN in the demo)
+- Tailwind CSS (via CDN for quick prototyping)
 - lucide-react (icons)
 
-## Files of interest
+Note: This project includes Tailwind via the CDN inside `App.jsx` for quick prototyping. For production or a more robust setup, consider configuring Tailwind via PostCSS and importing the generated CSS in `index.css`.
 
-- `index.html` — base HTML used by Vite.
-- `package.json` — Node scripts and dependencies.
-- `vite.config.js` — Vite configuration.
-- `src/App.jsx` — Main React app and all UI components (Header, HeroSection, FeaturesSection).
-- `src/main.jsx` — React entrypoint.
-- `src/index.css` — Project CSS (Tailwind directives / overrides).
+## Getting started
 
-## Setup
+These instructions assume you have Node.js (16+) and npm or yarn installed.
 
 1. Install dependencies
 
-   Open PowerShell in the project root and run:
-
-   npm install
+```powershell
+npm install
+```
 
 2. Run the development server
 
-   npm run dev
+```powershell
+npm run dev
+```
 
-   This starts Vite and opens a dev server (usually at http://localhost:5173). Live reload is enabled.
+## Scripts (from package.json)
 
-## Notes about the demo
+- `dev` — Starts the Vite development server
+- `build` — Builds the production bundle
+- `preview` — Serves the built production bundle locally
 
-- The project uses Tailwind CSS via the CDN link directly inserted in `src/App.jsx` for quick prototyping. For production or larger projects, prefer installing Tailwind as a PostCSS plugin and generating a compiled stylesheet.
-- Icons are provided by `lucide-react`. If you add icons, import them from `lucide-react` at the top of `src/App.jsx`.
-- The `App.jsx` file contains inline styles and small illustrative SVGs to keep the demo self-contained.
+If your `package.json` differs from the above, use the corresponding scripts defined there.
+
+## Notes and suggestions
+
+- The demo includes Tailwind via CDN inside `App.jsx` for simplicity. To use Tailwind with PostCSS properly (recommended for production), move the CDN styles out and follow the Tailwind + Vite installation guide:
+
+  1. Install Tailwind as a dev dependency and configure `tailwind.config.js`.
+  2. Import the generated Tailwind CSS into `src/index.css`.
+
+- The `App.jsx` file currently contains inline SVGs and small subcomponents. If you expand the project consider splitting components into their own files under `src/components/`.
+
+## Contributing
+
+This repository is meant as a small demo. If you'd like to contribute:
+
+1. Fork or clone the repo
+2. Create a feature branch
+3. Run the dev server and implement changes
+4. Open a pull request with a clear description
